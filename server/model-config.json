@@ -1,0 +1,50 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "razena"
+  },
+  "AccessToken": {
+    "dataSource": "razena",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "razena",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "razena",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "razena",
+    "public": false
+  },
+  "Produto": {
+    "dataSource": "razena",
+    "public": true
+  },
+  "Cafe": {
+    "dataSource": "razena",
+    "public": true
+  },
+  "vendas_consumo": {
+    "dataSource": "razena",
+    "public": true
+  }
+}

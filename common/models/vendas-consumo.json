@@ -1,0 +1,46 @@
+{
+  "name": "vendas_consumo",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "postgresql": {
+      "schema": "public",
+      "table": "vendas_consumo"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "id": true,
+      "generated": true,
+      "required": false,
+      "postgresql": {
+        "columnName": "id",
+        "dataType": "integer",
+        "nullable": "NO"
+      }
+    },
+    "peso": {
+      "type": "number",
+      "required": true
+    },
+    "metodo": {
+      "type": "string"
+    },
+    "filtros": {
+      "type": "number"
+    },
+    "cafe_id": {
+      "type": "number"
+    },
+    "user_id": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

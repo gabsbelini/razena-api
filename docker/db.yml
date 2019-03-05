@@ -1,0 +1,11 @@
+version: '2'
+services:
+  razena-api-db:
+    container_name: razena-api-db
+    image: postgres:10.5-alpine
+    environment:
+      - 'POSTGRES_DB=razena'
+      - 'POSTGRES_USER=root'
+      - 'POSTGRES_PASSWORD=root'
+    ports:
+      - 5432:5432

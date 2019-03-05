@@ -1,0 +1,57 @@
+{
+  "name": "Produto",
+  "plural": "produtos",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "postgresql": {
+      "schema": "public",
+      "table": "produto"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "id": true,
+      "generated": true,
+      "required": false,
+      "postgresql": {
+        "columnName": "id",
+        "dataType": "integer",
+        "nullable": "NO"
+      }
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "cafeId": {
+      "type": "Number",
+      "required": false,
+      "description": "Especialização de produto tipo Café",
+      "postgresql": {
+        "columnName": "cafe_id",
+        "dataType": "integer",
+        "nullable": "YES"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {
+    "cafe": {
+      "type": "belongsTo",
+      "model": "cafe",
+      "foreignKey": "cafeId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}
